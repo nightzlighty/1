@@ -1,0 +1,497 @@
+/* ==========================================================================
+   보라-검정 그라데이션 테마 및 세련된 모던 레이아웃 (정석 스타일링)
+   ========================================================================== */
+
+:root {
+  --bg-gradient: linear-gradient(180deg, #120a21 0%, #06040a 100%);
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-soft: rgba(255, 255, 255, 0.015);
+  --ink: #f2edf9;
+  --muted: #a094b7;
+  --light: #7b6f93;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-soft: rgba(255, 255, 255, 0.04);
+  --accent: #b388ff; /* 단정한 연보라 포인트 */
+  --radius: 8px;
+  --container: 1020px;
+}
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Pretendard Variable", Pretendard, system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.container {
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* 1. 스티키 탑바 내비게이션 */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  height: 56px;
+  border-bottom: 1px solid var(--line-soft);
+  background: rgba(18, 10, 33, 0.85);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+}
+
+.topbar-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.98rem;
+  font-weight: 800;
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  color: #120a21;
+  font-size: 0.75rem;
+  font-weight: 900;
+  border-radius: 6px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav a:hover { 
+  color: var(--accent); 
+}
+
+/* 2. 히어로 레이아웃 영역 */
+.hero {
+  min-height: calc(100vh - 56px);
+  padding: clamp(54px, 8vh, 88px) 0;
+  border-bottom: 1px solid var(--line-soft);
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: clamp(34px, 7vw, 86px);
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.lead {
+  color: var(--ink);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+.intro {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* 3. 버튼 컴포넌트 */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: #120a21;
+  border-color: transparent;
+}
+
+.button:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.button.primary:hover {
+  background: #d0b3ff;
+  color: #120a21;
+}
+
+/* 4. 우측 프로필 및 터미널 컴포넌트 */
+.profile {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: rgba(20, 15, 30, 0.6);
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.profile-visual {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.terminal {
+  height: 164px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  background: #0b0714;
+  color: #d0c7de;
+  overflow: hidden;
+}
+
+.terminal-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.02);
+}
+
+.dot { width: 8px; height: 8px; border-radius: 99px; }
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-body {
+  padding: 14px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.terminal-body span { color: var(--accent); }
+.terminal-body strong { color: #ffffff; font-weight: 700; }
+.terminal-body em { color: var(--muted); font-style: normal; }
+
+.profile-body { padding: 20px; }
+.profile h2 { margin-bottom: 14px; font-size: 1rem; font-weight: 800; color: #ffffff; }
+.profile dl { display: grid; gap: 12px; }
+
+.profile-row {
+  display: grid;
+  gap: 2px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line-soft);
+}
+.profile-row:first-child { padding-top: 0; border-top: 0; }
+.profile dt { color: var(--light); font-size: 0.75rem; font-weight: 700; }
+.profile dd { color: var(--ink); font-size: 0.92rem; font-weight: 600; }
+
+/* 5. 공통 명확한 레프트 라벨 섹션 그리드 구조 */
+section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: clamp(30px, 5vw, 70px);
+  align-items: start;
+}
+
+.label {
+  position: sticky;
+  top: 86px;
+  color: var(--light);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-bottom: 24px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.copy {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+.copy p + p { margin-top: 16px; }
+
+/* 6. 사각형 통계(Stats) 박스 구조 컴포넌트 */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.stat {
+  min-height: 104px;
+  padding: 18px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.stat strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.stat span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* 7. 타임라인 리스트 */
+.timeline { display: grid; gap: 12px; }
+.timeline-item {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.date {
+  color: var(--light);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.timeline-item h3 { margin-bottom: 6px; color: #ffffff; font-size: 1.05rem; font-weight: 800; }
+.timeline-item p { color: var(--muted); font-size: 0.94rem; }
+
+/* 8. 프로젝트 및 스택 카드 컴포넌트 구조 */
+.projects, .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.project, .card {
+  padding: 22px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.project h3, .card h3 { margin-bottom: 8px; color: #ffffff; font-size: 1.1rem; font-weight: 800; }
+.project p, .card p { color: var(--muted); font-size: 0.94rem; line-height: 1.65; }
+
+.meta { margin-bottom: 6px; color: var(--light); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 0 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-soft);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* 스택 리스트 내부 디자인 */
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.skill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid var(--line-soft);
+  border-radius: 6px;
+  background: var(--surface-soft);
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+/* 9. FAQ 아코디언 컴포넌트 구조 */
+.faq { border-top: 1px solid var(--line); margin-top: 10px; }
+.faq-item { border-bottom: 1px solid var(--line-soft); padding: 20px 0; }
+.faq-item summary { list-style: none; cursor: pointer; }
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+.question::after { content: "+"; color: var(--light); transition: transform 0.2s; }
+.faq-item[open] .question::after { transform: rotate(45deg); color: var(--accent); }
+.answer { padding-top: 12px; color: var(--muted); font-size: 0.96rem; line-height: 1.7; }
+
+/* 10. 연락처 그리드 및 렉트 인프라 */
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 10px; }
+.contact {
+  display: block;
+  min-height: 104px;
+  padding: 18px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.contact span { display: block; margin-bottom: 6px; color: var(--light); font-size: 0.76rem; font-weight: 700; }
+.contact strong { display: block; color: #ffffff; font-size: 0.95rem; overflow-wrap: anywhere; }
+.link-block:hover { border-color: var(--accent); }
+
+/* 11. 미니멀 오디오 플레이어 정렬 */
+.audio-container { margin-top: 40px; }
+.audio-section {
+  padding: 24px 0 0;
+  border-top: 1px solid var(--line-soft);
+}
+.audio-section p { font-size: 0.82rem; color: var(--light); margin-bottom: 10px; }
+audio { width: 100%; height: 32px; opacity: 0.6; }
+
+/* 12. 푸터 아키텍처 및 카운터 */
+footer {
+  padding: 60px 0 40px;
+  border-top: 1px solid var(--line-soft);
+  margin-top: 80px;
+  background: rgba(10, 6, 18, 0.5);
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.quote { font-size: 1.05rem; color: var(--ink); font-style: italic; }
+.footer-meta { color: var(--light); font-size: 0.82rem; }
+.visitor-counter { margin-top: 6px; font-size: 0.82rem; }
+#counter-val { color: var(--accent); font-weight: 700; }
+
+/* 이스터에그 모달 제어 링크 */
+.secret-trigger { color: rgba(255, 255, 255, 0.02); font-size: 0.8rem; cursor: default; }
+.secret-trigger:hover { color: var(--light); }
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+.modal-board {
+  background: #120a21;
+  border: 1px solid var(--line);
+  padding: 30px;
+  text-align: center;
+  max-width: 380px;
+  width: 85%;
+  border-radius: 6px;
+}
+.modal-board h3 { color: #ffffff; margin-bottom: 10px; }
+.modal-board p { color: var(--muted); font-size: 0.9rem; }
+.close-button {
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   미디어 쿼리 - 브라우저 규격별 유연한 전환 (Responsive)
+   ========================================================================== */
+@media (max-width: 940px) {
+  .hero-grid, .section-grid { grid-template-columns: 1fr; }
+  .label { position: static; margin-bottom: -10px; }
+  .profile { width: 100%; max-width: 450px; justify-self: center; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .projects, .cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .nav { display: none; }
+  .stats, .contact-grid { grid-template-columns: 1fr; }
+  .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+}
