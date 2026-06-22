@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NightZ | Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top" aria-label="맨 위로 이동">
+        <span class="brand-logo">N</span>
+        NightZ
+      </a>
+      <ul class="nav">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#violin">바이올린</a></li>
+        <li><a href="#timeline">흐름</a></li>
+        <li><a href="#projects">프로젝트</a></li>
+        <li><a href="#skills">기술</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">연락</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>NightZ</h1>
+          <p class="lead">기술과 사람, 그리고 구조를 다루는 방식에 관심을 가지며 지속 가능한 시스템을 설계하는 개발자입니다.</p>
+          <p class="intro">
+            저는 개발과 커뮤니티 운영을 하고 있는 사람입니다. 부산에서 태어나 현재는 미국 인디애나주에 살고 있으며, 익숙하지 않은 환경 속에서도 자연스럽게 새로운 구조와 시스템을 만드는 일에 관심을 가지게 되었습니다. 처음에는 엔트리를 통해 개발을 접했고, 단순한 호기심에서 시작된 경험이 Python과 JavaScript를 거치며 실제로 동작하는 프로그램과 시스템을 만드는 방향으로 이어졌습니다. 지금은 웹 개발과 Discord 기반 프로젝트를 중심으로 작업하고 있습니다. 저는 제 자신을 하나의 고정된 형태라기보다는 계속 움직이고 변화하는 흐름에 가까운 존재라고 생각하며, 지나가는 찰나의 오염된 바람처럼 한곳에 머무르기보다는 새로운 것들을 스쳐 지나가며 영향을 주고받는 방식으로 살아가고 있습니다. 생각은 빠르게 흘러가고 관심은 계속 확장되며, 그 과정 속에서 계속 무언가를 만들고 실험합니다. 그리고 그 흐름은 아직 멈추지 않았습니다.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="#projects">프로젝트 보기</a>
+            <a class="button" href="#faq">내 생각 보기</a>
+            <a class="button" href="https://discord.gg/XrsgtFVy2y" target="_blank" rel="noreferrer">NyX 디스코드</a>
+          </div>
+        </div>
+
+        <aside class="profile" aria-label="프로필 요약">
+          <div class="profile-visual">
+            <div class="terminal" aria-label="인사말이 표시된 터미널 창">
+              <div class="terminal-top" aria-hidden="true">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-body">
+                <p><span>$</span>cat info.md</p>
+                <p><strong>NightZ Portfolio</strong></p>
+                <p><em>안녕하세요.</em> 구조 설계를 좋아하는 NightZ입니다.</p>
+                <p><span>$</span>status</p>
+                <p>building text-rpg, shipping web, managing community.</p>
+              </div>
+            </div>
+          </div>
+          <div class="profile-body">
+            <h2>Profile</h2>
+            <dl>
+              <div class="profile-row">
+                <dt>이름</dt>
+                <dd>Ricky Hitosis (박리키)</dd>
+              </div>
+              <div class="profile-row">
+                <dt>생년월일</dt>
+                <dd>2012.08.17</dd>
+              </div>
+              <div class="profile-row">
+                <dt>거주지역</dt>
+                <dd>부산 → 미국 인디애나주</dd>
+              </div>
+              <div class="profile-row">
+                <dt>한줄소개</dt>
+                <dd>자유롭게 흘러가는 하나의 오염된 바람</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container section-grid">
+        <p class="label">About</p>
+        <div>
+          <h2 class="section-title">구조와 흐름을 이해하고, 만들어진 코드가 계속 사용되는 과정을 고민합니다.</h2>
+          <div class="copy">
+            <p>
+              개발을 처음 시작한 계기는 엔트리였습니다. 단순한 호기심에서 출발했지만 이후 직접 무언가를 만들고 싶다는 생각으로 확장되었습니다. 처음에는 단순히 화면 속에서 무언가가 움직이는 것이 신기해서 시작했지만, 점점 “이 구조는 어떻게 동작하는가”에 대한 관심으로 이어졌습니다.
+            </p>
+            <p>
+              이후 Python과 JavaScript를 학습하면서 단순한 실습 수준을 넘어 실제로 동작하는 시스템을 만들기 시작했고, 그 과정에서 봇 개발과 웹 프로젝트로 자연스럽게 확장되었습니다. 코드를 만드는 것보다, 만들어진 코드가 계속 사용되면서 발생하는 문제와 그 해결 과정까지 포함한 구조 설계에 더 큰 흥미를 느끼고 있습니다.
+            </p>
+          </div>
+
+          <div class="stats" aria-label="경험 요약">
+            <div class="stat">
+              <strong>2021</strong>
+              <span>엔트리로 코딩을 처음 시작한 해</span>
+            </div>
+            <div class="stat">
+              <strong>100+</strong>
+              <span>직접 설계하고 진행한 프로젝트 경험</span>
+            </div>
+            <div class="stat">
+              <strong>10+</strong>
+              <span>운영 및 거쳐온 서버 인프라 수</span>
+            </div>
+            <div class="stat">
+              <strong>260명</strong>
+              <span>커뮤니티 NyX 최고 동시 관리 규모</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="violin">
+      <div class="container section-grid">
+        <p class="label">Violin</p>
+        <div>
+          <h2 class="section-title">음악적 흐름과 밸런스, 개발 사유의 확장으로 이어지는 또 다른 세계.</h2>
+          <div class="copy">
+            <p>
+              바이올린은 어린 시절부터 시작하여 현재까지 성실하게 이어지고 있으며, SBYSO(South Bend Youth Symphony Orchestras)에서 단원으로 깊이 있게 활동한 경험이 있습니다. 주요 연주 경험으로는 무대의 정교함을 요구하는 다양한 협주곡들과 여러 클래식 음악들을 포함하고 있습니다.
+            </p>
+            <p>
+              저에게 음악은 단순한 취미 영역이 아닙니다. 전체적인 곡의 구조와 선율의 유기적인 흐름을 이해하는 또 다른 논리적 방식으로 작용하고 있으며, 이러한 예술적 경험은 개발할 때의 사고 방식과 밸런스 유지에도 깊은 영향을 주고 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <div class="container section-grid">
+        <p class="label">Timeline</p>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="date">2021년 3월</div>
+            <div>
+              <h3>엔트리를 통한 개발 입문</h3>
+              <p>기초 조건문과 논리 흐름을 직관적으로 익히며 컴퓨터 메커니즘에 대한 강력한 첫 호기심을 마주했습니다.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="date">이후 발전기</div>
+            <div>
+              <h3>Python 및 JavaScript 확장</h3>
+              <p>단순한 스크립트를 넘어 실제 동작하는 유기적 시스템의 구조를 학습하고, CLI 툴 및 기본적인 연동 작업을 수행했습니다.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="date">커뮤니티기</div>
+            <div>
+              <h3>디스코드 봇 및 웹 시스템 안착</h3>
+              <p>단순 기능 구현 위주에서 탈피하여 점차 Discord Bot과 웹 시스템 개발로 이어지면서 실제 서비스 형태의 프로젝트로 확장되었습니다.</p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <div class="date">현재</div>
+            <div>
+              <h3>전체 구조와 운영 고려</h3>
+              <p>단순한 코드 작성이 아니라 사용자가 있는 인프라 환경 전체를 조망하고, 텍스트 RPG 및 플랫폼 웹 구축에 집중하고 있습니다.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container section-grid">
+        <p class="label">Projects</p>
+        <div>
+          <h2 class="section-title">기능 구현을 넘어 확장 가능성과 유지 가능성을 고려한 프로젝트들입니다.</h2>
+          <div class="projects">
+            <article class="project">
+              <div class="project-body">
+                <div class="meta">Core Project · Active</div>
+                <h3>Text RPG 프로젝트</h3>
+                <p>현재 가장 몰입하여 개발을 진행 중인 메인 아키텍처 프로젝트입니다. 여러 시스템의 데이터가 유기적으로 연결되고 예외 상황에서도 구조적으로 무너지지 않는 백엔드 흐름을 중점적으로 실험하고 있습니다.</p>
+                <div class="tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Game Logic</span>
+                  <span class="tag">Architecture</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-body">
+                <div class="meta">Community · Platform</div>
+                <h3>NyX 커뮤니티 운영 및 연동 시스템</h3>
+                <p>최대 인원 260명 규모의 NyX 디스코드 서버를 4월 5일부터 운영해 오고 있습니다. 단순한 매니징을 넘어 서버 내 규칙 설정, 분쟁 및 합병 관리, 커뮤니티 흐름 유지 등 사람이 모이는 인프라 전체를 하나의 큰 시스템으로 다루는 경험을 축적했습니다.</p>
+                <div class="tags">
+                  <span class="tag">Discord Bot</span>
+                  <span class="tag">Discord API</span>
+                  <span class="tag">Community Management</span>
+                  <span class="tag">Server Operations</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-body">
+                <div class="meta">Web Development · System</div>
+                <h3>웹 제작 및 구조 다각화</h3>
+                <p>포트폴리오 및 관리용 웹 페이지들을 구축하며 단독 기술 사용에 그치지 않고, 프론트엔드와 백엔드가 데이터 구조 안에서 매끄럽게 연결될 수 있도록 정밀하게 연동하는 작업을 이어가고 있습니다.</p>
+                <div class="tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">Web Design</span>
+                  <span class="tag">Integration</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-body">
+                <div class="meta">Experience · History</div>
+                <h3>10개 내외의 서버 운영 이력</h3>
+                <p>과거 접은 서버들을 포함하여 약 10여 개의 다양한 서버 인프라를 생성하고 폐기했습니다. 이 과정에서 서버 테러 사태, 역사 내 분쟁 처리 등 실전 리스크 매니지먼트를 겪으며 한층 견고한 예외처리 마인드를 갖추게 되었습니다.</p>
+                <div class="tags">
+                  <span class="tag">Linux</span>
+                  <span class="tag">Incident Handling</span>
+                  <span class="tag">Infrastructure</span>
+                  <span class="tag">Log Checking</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container section-grid">
+        <p class="label">Skills</p>
+        <div>
+          <h2 class="section-title">실제 구조 안에서 연결하여 시스템을 구축하기 위해 다뤄온 기술들입니다.</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Language</h3>
+              <p>로직 고도화, 자동화, 정교한 데이터 타입을 정의할 때 핵심 기반으로 사용합니다.</p>
+              <div class="skill-list">
+                <span class="skill">JavaScript</span>
+                <span class="skill">TypeScript</span>
+                <span class="skill">Python</span>
+                <span class="skill">아희</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Web &amp; Eco</h3>
+              <p>웹 UI 구조의 정석적인 마크업과 차분한 스타일링을 위해 유연하게 활용합니다.</p>
+              <div class="skill-list">
+                <span class="skill">HTML5</span>
+                <span class="skill">CSS3</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Backend &amp; Library</h3>
+              <p>Discord Bot 구축과 이벤트 기반 자동화 환경의 백엔드 흐름을 지탱합니다.</p>
+              <div class="skill-list">
+                <span class="skill">Node.js</span>
+                <span class="skill">Discord.js</span>
+                <span class="skill">Discord API</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Infra &amp; Tools</h3>
+              <p>호스팅 서버의 터미널 파일 제어와 형상 관리를 정석적으로 처리합니다.</p>
+              <div class="skill-list">
+                <span class="skill">Linux</span>
+                <span class="skill">Git</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ 섹션: 첫 번째 항목의 open 속성을 제거하여 기본적으로 닫혀있도록 수정 -->
+    <section id="faq">
+      <div class="container section-grid">
+        <p class="label">FAQ</p>
+        <div>
+          <h2 class="section-title">자주 묻는 질문</h2>
+          <div class="faq">
+            <details class="faq-item">
+              <summary class="question">Q. 개발을 시작한 계기와 현재 중심 활동은 무엇인가요?</summary>
+              <div class="answer">
+                <p>개발은 엔트리를 통해 처음 시작했으며 이후 Python과 JavaScript로 확장되었습니다. 현재는 핵심 방향성인 웹 개발, Discord Bot 아키텍처링, 그리고 NyX 커뮤니티 운영을 중심으로 전방위적인 활동을 병행하고 있습니다.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="question">Q. 개발 및 운영 시 가장 중요하게 생각하는 기준은 무엇인가요?</summary>
+              <div class="answer">
+                <p>가장 중요하게 생각하는 기준은 '실제 사용자가 존재하고 지속적으로 유지 가능한 구조인가'입니다. 단순한 기능 일회성 구현에 그치지 않고 배포 이후에 발생할 수 있는 데이터 오염이나 흐름의 붕괴를 사전에 제어하는 설계를 추구합니다.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact 섹션: 인스타그램과 전화번호를 레이아웃 무너짐 없이 정석 그리드로 추가 -->
+    <section id="contact">
+      <div class="container section-grid">
+        <p class="label">Contact</p>
+        <div>
+          <h2 class="section-title">연락 및 커뮤니티 주소</h2>
+          <div class="contact-grid">
+            <div class="contact">
+              <span>Discord</span>
+              <strong>nightz_rn</strong>
+            </div>
+            <div class="contact">
+              <span>Email</span>
+              <strong>nightzlighty@gmail.com</strong>
+            </div>
+            <a class="contact link-block" href="https://instagram.com/nightz_7" target="_blank" rel="noreferrer">
+              <span>Instagram</span>
+              <strong>@nightz_7</strong>
+            </a>
+            <div class="contact">
+              <span>Phone</span>
+              <strong>+1 574 404 1145</strong>
+            </div>
+            <a class="contact link-block" href="https://discord.gg/XrsgtFVy2y" target="_blank" rel="noreferrer">
+              <span>Community Link</span>
+              <strong>discord.gg/XrsgtFVy2y</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container audio-container">
+      <div class="audio-section">
+        <p>Background Music Playlist</p>
+        <audio controls loop>
+          <source src="playlist.mp3" type="audio/mpeg">
+          사용 중인 브라우저는 오디오 태그를 지원하지 않습니다.
+        </audio>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p class="quote">“당신의 앞날이 찬란히 빛나길”</p>
+      <div class="footer-meta">
+        <p>© 2026 NightZ. All rights reserved.</p>
+        <div class="visitor-counter">
+          Visitor Count: <span id="counter-val">000000</span>
+        </div>
+      </div>
+      <a href="#secret" class="secret-trigger" id="openSecret">?</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="secretModal">
+    <div class="modal-board">
+      <h3>비밀 페이지</h3>
+      <p>NightZ 포트폴리오의 숨겨진 이스터에그 영역입니다.</p>
+      <button class="close-button" id="closeSecret">닫기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
